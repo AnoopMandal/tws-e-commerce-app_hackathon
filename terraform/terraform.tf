@@ -1,8 +1,14 @@
 terraform {
   backend "s3" {
-    bucket = "terraform-s3-backend-tws-hackathon"
+    bucket = "anp-terraform-be"
     key    = "backend-locking"
-    region = "eu-west-1"
+    region = "ap-south-1"
     use_lockfile = true
   }
 }
+
+/*terraform {
+    backend "local" {
+        path = "terraform.tfstate"
+    }
+}*/
