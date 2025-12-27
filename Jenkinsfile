@@ -113,7 +113,7 @@ pipeline {
                     update_k8s_manifests(
                         imageTag: env.DOCKER_IMAGE_TAG,
                         manifestsPath: 'kubernetes',
-                        gitCredentials: 'c7be81b1-b101-4335-b6a1-7389f3cf9949',
+                        gitCredentials: 'github',
                         gitUserName: 'anoopmandal',
                         gitUserEmail: 'anooplivfree@gmail.com'
                     )
