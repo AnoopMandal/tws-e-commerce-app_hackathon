@@ -27,11 +27,11 @@ module "eks" {
   cluster_endpoint_public_access  = false
   cluster_endpoint_private_access = true
 
- /* //access entry for any specific user or role (jenkins controller instance)
+  //access entry for any specific user or role (jenkins controller instance)
   access_entries = {
     # One access entry with a policy associated
     example = {
-      principal_arn = "arn:aws:iam::876997124628:user/terraform"
+      principal_arn = "arn:aws:iam::758888582255:user/rashmi"
 
       policy_associations = {
         example = {
@@ -42,7 +42,7 @@ module "eks" {
         }
       }
     }
-  }*/
+  }
 
 
   cluster_security_group_additional_rules = {
@@ -67,11 +67,15 @@ module "eks" {
     vpc-cni = {
       most_recent = true
     }
+    /*aws-ebs-csi-driver = {
+      most_recent = true
+    }*/
   }
 
   vpc_id                   = module.vpc.vpc_id
   subnet_ids               = module.vpc.private_subnets
   control_plane_subnet_ids = module.vpc.private_subnets
+  
 
   # EKS Managed Node Group(s)
 

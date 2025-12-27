@@ -8,7 +8,7 @@ pipeline {
         DOCKER_IMAGE_NAME = 'anooplivfree/easyshop-app'
         DOCKER_MIGRATION_IMAGE_NAME = 'anooplivfree/easyshop-migration'
         DOCKER_IMAGE_TAG = "${BUILD_NUMBER}"
-        GITHUB_CREDENTIALS = credentials('c7be81b1-b101-4335-b6a1-7389f3cf9949')
+        GITHUB_CREDENTIALS = credentials('github')
         GIT_BRANCH = "master"
     }
     
