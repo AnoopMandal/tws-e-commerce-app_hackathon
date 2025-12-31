@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: easyshop-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /prod-easyshop
+        pathType: Prefix
+        backend:
+          service:
+            name: easyshop-service
+            port:
+              number: 80
