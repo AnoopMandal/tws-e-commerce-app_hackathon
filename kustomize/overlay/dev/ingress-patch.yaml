@@ -7,3 +7,9 @@ spec:
   - http:
       paths:
       - path: /dev-easyshop
+        pathType: Prefix
+        backend:
+          service:
+            name: easyshop-service
+            port:
+              number: 80

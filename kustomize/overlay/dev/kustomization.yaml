@@ -8,3 +8,6 @@ namespace: dev-easyshop
 
 commonLabels:
   environment: dev
+
+patchesStrategicMerge:
+  - ingress-patch.yaml
